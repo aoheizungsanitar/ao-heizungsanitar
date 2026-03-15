@@ -9,7 +9,8 @@ export async function POST(req) {
 
     const companyEmail = "mustafaomid8@gmail.com"; // change to your real inbox
 
-    await resend.emails.send({
+    const adminResult = await resend.emails.send({
+console.log("Admin email result:", adminResult);
       from: "AO Heizung Sanitär <onboarding@resend.dev>",
       to: [companyEmail],
       subject: `Neue Anfrage – ${configuration.systemType} / ${configuration.powerSize}`,
@@ -134,7 +135,8 @@ export async function POST(req) {
     });
 
     if (customer.email) {
-      await resend.emails.send({
+      const customerResult = await resend.emails.send({
+console.log("Customer email result:", customerResult);
         from: "AO Heizung Sanitär <onboarding@resend.dev>",
         to: [customer.email],
         subject: "Vielen Dank für Ihre Anfrage bei AO Heizung Sanitär",
@@ -207,7 +209,7 @@ export async function POST(req) {
   } catch (error) {
     console.error("Lead API error:", error);
     return Response.json(
-      { ok: false, error: "E-Mail konnte nicht gesendet werden." },
+      { ok: false, error: error?.message || "E-Mail konnte nicht gesendet werden." },
       { status: 500 }
     );
   }
