@@ -103,7 +103,7 @@ const powerOptions = ["5 kW", "8 kW", "10 kW", "12 kW", "Individuell"];
 const currentHeatingOptions = ["Gas", "Öl", "Fernwärme", "Direktstrom", "Pellets", "Sonstiges"];
 const roofTypes = ["Satteldach", "Flachdach", "Pultdach", "Zeltdach", "Sonstiges"];
 
-function cn(...classes) {
+function cn(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
