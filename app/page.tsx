@@ -107,7 +107,17 @@ function cn(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-function SectionTitle({ eyebrow, title, text, center = false }) {
+function SectionTitle({
+  eyebrow,
+  title,
+  text,
+  center = false,
+}: {
+  eyebrow?: string;
+  title: string;
+  text?: string;
+  center?: boolean;
+}) {
   return (
     <div className={cn("mb-10", center && "text-center max-w-3xl mx-auto")}>
       {eyebrow && (
