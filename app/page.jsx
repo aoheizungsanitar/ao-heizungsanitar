@@ -21,11 +21,11 @@ import {
 
 const COMPANY = {
   name: "AO Heizung Sanitär",
-  phone: "+49 000 0000000",
-  email: "anfrage@ao-heizung-sanitaer.de",
-  location: "Deutschland",
+  phone: "+49 157 8015712",
+  email: "aoheizungsanitar@gmail.com",
+  location: "Am Magerhot 10, 50997 Köln, Deutschland",
   mapsEmbed:
-    "https://www.google.com/maps?q=Deutschland&output=embed",
+    "https://maps.app.goo.gl/VxU2oFoqM6aCoSte6",
 };
 
 const packages = [
