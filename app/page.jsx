@@ -14,7 +14,6 @@ import {
   ChevronRight,
   Leaf,
   Zap,
-  Home,
   BadgeEuro,
   Star,
   Thermometer,
@@ -103,21 +102,11 @@ const powerOptions = ["5 kW", "8 kW", "10 kW", "12 kW", "Individuell"];
 const currentHeatingOptions = ["Gas", "Öl", "Fernwärme", "Direktstrom", "Pellets", "Sonstiges"];
 const roofTypes = ["Satteldach", "Flachdach", "Pultdach", "Zeltdach", "Sonstiges"];
 
-function cn(...classes: string[]) {
+function cn(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function SectionTitle({
-  eyebrow,
-  title,
-  text,
-  center = false,
-}: {
-  eyebrow?: string;
-  title: string;
-  text?: string;
-  center?: boolean;
-}) {
+function SectionTitle({ eyebrow, title, text, center = false }) {
   return (
     <div className={cn("mb-10", center && "text-center max-w-3xl mx-auto")}>
       {eyebrow && (
